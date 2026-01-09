@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <script>
+        function calc(){
+
+                let num1 = parseInt(document.form1.num1.value);
+                let num2 = parseInt(document.form1.num2.value);
+
+                let ch = document.form1.ch.value;
+                let res;
+                switch(ch){
+                    case "add": res = num1 + num2; break;
+                    case "sub": res = num1 - num2;break;
+                    case "mul": res = num1 * num2;break;
+                    case "div": res = parseInt(num1/num2);break;
+                }
+                document.getElementById("res").innerText = res;
+        }
+    </script>
+    <form name="form1">
+        Enter Number:
+        <input type="number" name="num1">
+        <br>
+        Enter Number:
+        <input type="number" name="num2">
+        <br>
+        Select Choice:
+        <input type="radio" name="ch" value="add" onchange=calc()>+
+        <input type="radio" name="ch" value="sub" onchange=calc()>-
+        <input type="radio" name="ch" value="mul" onchange=calc()>*
+        <input type="radio" name="ch" value="div" onchange=calc()>/
+        <br>
+    </form>
+    Result:
+    <span style="background:yellow" id="res"></span>
+</body>
+</html>

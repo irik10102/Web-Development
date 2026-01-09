@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus-Blur</title>
+</head>
+<body>
+    <script>
+        
+        function f1()
+        {
+            document.getElementById("sp1").innerText=`Please enter your name`;
+        }
+        function b1()
+        {
+            document.getElementById("sp1").innerText ="";
+        }
+        function f2()
+        {
+            document.getElementById("sp2").innerText="Please select a date";
+        }
+        function b2()
+        {
+            document.getElementById("sp2").innerText="";
+        }
+    </script>
+    <form>
+        <input type="text" id="nm" onfocus="f1()" onblur="b1()">
+        <span id = "sp1" style="background: greenyellow;"></span>
+        <br>
+        <br>
+        <input type="date" id="dob" onfocus="f2()" onblur="b2()">
+        <span id="sp2" style="background:yellow;"></span>
+    </form>
+
+</body>
+</html>

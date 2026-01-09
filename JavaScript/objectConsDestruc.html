@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function student(name, loc){
+            this.name = name;
+            this.loc  = loc;
+        }
+
+        student.prototype = {
+            gender:"male",
+            dept:"cse"
+        }
+
+        obj1 = new student('sahil',"kol");
+        obj2 = new student('soumili', 'khardaha');
+
+        const {name,gender} = obj1; //destructuring
+        console.log(name);
+        console.log(gender);
+        console.log(obj2);
+
+        //Array Destructuring 
+        emp=['name','roll','class'];
+
+        var [v1,v2,v3] = emp;
+        console.log(v1);
+        console.log(v2);
+        console.log(v3);
+
+    </script>
+</body>
+</html>

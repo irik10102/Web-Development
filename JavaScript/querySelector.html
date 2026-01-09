@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Selector</title>
+</head>
+<body>
+    <script>
+        function check(){
+
+            let nm = document.querySelector("#nm").value;
+            let dob = document.querySelector(".dob").value;
+
+            document.querySelector("h3").innerText=`Hi ${nm}! , Have a nice day!`;
+            window.alert(`Name: ${nm}\nDate of Birth: ${dob}`);
+        }
+    </script>
+    Enter Name:
+    <input type="text" id="nm">
+    <br>
+    Enter Date of Birth:
+    <input type="date" class="dob">
+    <br>
+    <h3>Welcome to my Page</h3>
+    <button onclick=check()>Show!</button>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Switch</title>
+</head>
+<body>
+    <script>
+        var num1 = parseInt(window.prompt("Enter a number:"));
+        var num2 = parseInt(window.prompt("Enter another number:"));
+        var ch = parseInt(window.prompt("1:Add\n2:Multiplication\n3:Divition\n4:Subtract"));
+        var result;
+
+        switch(ch){
+            case 1: result = num1+num2; break;
+            case 2: result = num1*num2; break;
+            case 3: result = num1/num2; break;
+            case 4: result = num1-num2; break;
+            default: result = "Invalid choice"
+        }
+
+        window.alert("Result: "+result);
+    </script>
+</body>
+</html>

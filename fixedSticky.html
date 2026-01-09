@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky and Fixed Positions</title>
+    <style>
+        body{
+            height:3000px;
+        }
+
+        #dout{
+            background-color: lightgreen;
+            color:blue;
+            border:2px solid red;
+            width:40%;
+            height:30%;
+            position:relative;
+            top:200px;
+            left:250px;
+        }
+
+        #din{
+            background-color: yellow;
+            color:green;
+            height:40%;
+            width:30%;
+            position:absolute;
+            border:20x dotted blue;
+            top:50px;
+            left:180px;
+
+        }
+
+        #d4{
+            background-color:yellow;
+            color:green;
+            position:sticky;
+            top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Sticky div example</h3>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Earum amet molestiae veniam architecto, voluptate, optio, 
+        esse alias assumenda neque repellat exercitationem vel enim expedita voluptatum aperiam. 
+        Fugit debitis officiis possimus!
+    </p>
+
+
+    <div id="d4">
+        this is an example of a sticky div
+    </div>
+    <br>
+    <p>
+        Lorem ipsum dolor sit amet, 
+        consectetur adipisicing elit.
+         Quibusdam aliquam mollitia eveniet aliquid repellat ut quidem vitae molestiae culpa earum? Repellat voluptatum quis architecto labore temporibus esse, 
+        facilis quibusdam explicabo!
+    </p>
+    <div id="dout">
+        this is an example of outer div.
+        <div id="din">
+            this is an example of inner div.
+        </div>
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Names</title>
+</head>
+<body>
+    <script>
+        var names=[];
+        function addnm(){
+            let n = document.getElementById("nm").value;
+            names.push(n);
+            console.log(names);
+            let res = '<ol>';
+
+            for(let val of names)
+            {
+                res = res + `<li>${val}</li>`;
+            }
+            res = res + `</ol>`;
+            document.getElementById("result").innerHTML = res;
+            document.getElementById("nm").value="";
+        }
+    </script>
+    Enter Name:
+    <input type="text" id="nm">
+    <br>
+    <button onclick="addnm()">ADD</button>
+    <br>
+    <div id="result">
+
+    </div>
+</body>
+</html>

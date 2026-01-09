@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addlisten</title>
+</head>
+<body>
+    <button id="btn1">Check</button>
+    <span id="spn1"></span>
+    <script>
+        const bt=document.querySelector("#btn1");
+        bt.addEventListener("mouseenter", ()=>{
+            document.querySelector("#spn1").innerText="Hello Button Touched";
+
+        })
+
+        bt.addEventListener("mouseout", ()=>{
+            document.querySelector("#spn1").innerText="";
+        })
+
+        bt.addEventListener("click", ()=>{
+            alert("button is clicked!");
+        })
+    </script>
+</body>
+</html>

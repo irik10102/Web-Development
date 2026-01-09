@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Span</title>
+    <style>
+        .white{
+            background:white;
+        }
+        table,td, th{
+            border:2px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table cellpadding="7px" cellspacing="2px" width="40%" bgcolor="yellow">
+        <caption><strong>Schedule</strong></caption>
+        <tr class="white">
+            <th>Days</th>
+            <th>Session1</th>
+            <th>Session2</th>
+            <th>Break</th>
+            <th>Session3</th>
+        </tr>
+        <tr>
+            <td class="white">Monday</td>
+            <td colspan="2">Maths</rowspan></td>
+            <td rowspan="5">Lunch</td>
+            <td rowspan="5">Games</td>
+        </tr>
+        <tr>
+            <td class="white">Tue</td>
+            <td class="white">English</td>
+            <td class="white">Bengali</td>
+        </tr>
+
+        <tr>
+            <td class="white">Wed</td>
+            <td rowspan="2" colspan="2">Maths</td>
+        </tr>
+        <tr>
+            <td class="white">Thrus</td>
+        </tr>
+        <tr>
+            <td class="white">Fri</td>
+            <td colspan="2">Science</td>
+        </tr>
+      
+    </table>
+    
+</body>
+</html>

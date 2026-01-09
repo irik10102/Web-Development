@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <form name="form1" class="container">
+    <table>
+        <tr>
+            <td>Name:</td>
+            <td><input type="text" id="name"></td>
+            <td>CLASS</td>
+            <td>
+                <select name="class1">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </td>
+            <td>Section</td>
+            <td>
+                <select name="section">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                </select>
+            </td>
+        </tr>
+            <td>Physics:</td>
+            <td><input type="number" id="phy"></td>
+        <tr>
+            <td>Maths:</td>
+            <td><input type="number" id="mat"></td>
+        </tr>
+        <tr>
+            <td>English:</td>
+            <td><input type="number" id="eng"></td>
+        </tr>
+        <tr>
+            <td>Chemistry:</td>
+            <td><input type="number" id="chem"></td>
+        </tr>
+        <tr>
+            <td>Biology:</td>
+            <td><input type="number" id="bio"></td>
+        </tr>
+
+    </table>
+    <button class="btn btn-primary" type ="button" id="show">SHOW REPORT</button>
+    </form>
+    <table class="container mt-4" id="report">
+        <th>NAME</th>
+        <th>CLASS</th>
+        <th>SECTION</th>
+        <th>PERCENTAGE</th>
+        <th>TOTAL MARKS</th>
+        <th>GRADE</th>
+    </table>
+    <script>
+        var result = `<th>NAME</th>
+        <th>CLASS</th>
+        <th>SECTION</th>
+        <th>PERCENTAGE</th>
+        <th>TOTAL MARKS</th>
+        <th>GRADE</th>`;
+        document.getElementById('show').addEventListener('click', ()=>{
+            var phy = parseInt(document.getElementById('phy').value);
+            var math = parseInt(document.getElementById('mat').value);
+            var eng = parseInt(document.getElementById('eng').value);
+            var chem = parseInt(document.getElementById('chem').value);
+            var bio = parseInt(document.getElementById('bio').value);
+ 
+            var name = document.getElementById('name').value;
+            
+            var totalMarks = phy + math + eng + chem + bio;
+            var  percentage = (totalMarks/500)*100;
+            avg_marks = (totalMarks/500).toFixed(2);
+            if (avg_marks >= 80) {
+                grade = 'A';
+            }
+            else if (avg_marks >= 60) {
+                grade = 'B';
+            }
+            else if (avg_marks >= 40) {
+                grade = 'C';
+            }
+            else {
+                grade = 'FAIL';
+            }
+            let row = `<tr>
+                            <td>${name}</td>
+                            <td>${document.form1.class1.value}</td>
+                            <td>${document.form1.section.value}</td>
+                            <td>${percentage}</td>
+                            <td>${totalMarks}</td>
+                            <td>${grade}</td>
+                        </tr>`;
+
+            
+
+
+            document.getElementById('report').innerHTML = result + row;
+        })  
+    </script>
+</body>
+</html>

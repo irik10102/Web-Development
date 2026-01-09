@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var words = ['like', 'owl', 'jg', 'jhxng','Dabba'];
+        words = words.filter((val,ind)=>{
+            var alps = val.toLowerCase().split("");
+            if(alps.some((val,ind)=>{
+                if(val=='a'||val=='e'||val=='i'||val=='o'||val=='u')
+                    return true;
+                else
+                    return false;
+            }))
+                return alps.join("");
+        })
+        console.log(words);
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Prompt</title>
+</head>
+<body>
+    <script>
+
+        var name = window.prompt("Enter Name:");
+        var dept = window.prompt("Enter your Department Name:");
+        var roll = window.prompt("Enter your roll number:");
+        var email = window.prompt("Enter your email id:");
+
+
+        document.write(`
+        
+                         <ul>
+                            <li>Name: ${name}</li>
+                            <li>Department: ${dept}</li>
+                            <li>Roll no.: ${roll}</li>
+                            <li>email: ${email}</li>
+                        </ul>
+                            `)
+    </script>
+    
+</body>
+</html>

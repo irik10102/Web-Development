@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter Word:
+    <input type="text" id="word" onclick="this.value='';">
+    <br>
+    <span id="result"></span>
+    <br>
+    <button id="find">Find!</button>
+    <script>
+        const vowels = ['a','e', 'i', 'o', 'u'];
+        var chk =  async ()=>{
+            
+            try{
+                const word = document.getElementById('word').value.toLowerCase();
+                var pr = new Promise((resolve,reject)=>{
+                    if(vowels.includes(word[0])&&vowels.includes(word[word.length-1])){
+                        resolve("Word is good");
+                    }
+                    else{
+                        reject("Word is bad");
+                    }
+                })
+                document.getElementById('result').innerText = await pr;
+            }
+            catch(err){
+                document.getElementById('result').innerText = err;
+                console.error(err)
+            }
+            
+        }
+        document.getElementById('find').addEventListener('click', chk);
+    </script>
+</body>
+</html>

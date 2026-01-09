@@ -1,0 +1,37 @@
+<html>
+    <body>
+        <script>
+           var chkage=()=>{
+             let a=document.querySelector("#ag").value;  
+             try 
+             {
+                if(a<=0) 
+                {
+                   throw new Error("age can not be negative");   
+                }
+                else 
+                {
+                   document.querySelector("#result").innerHTML="valid age";
+                }
+             }
+             /*(catch(err)
+             {
+                 console.error(err); 
+                 document.querySelector("#result").innerHTML="";
+             }*/
+             finally 
+             {
+                 alert("task is over!");
+             }
+             console.log("Thank You");
+           }
+        </script> 
+
+        Enter Age : 
+        <input type="number" id="ag"/> 
+        <br> 
+        <button onclick="chkage()">CHECK</button> 
+        <br> 
+        <h3 id="result"></h3>
+    </body>
+</html>

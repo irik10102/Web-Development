@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onsubmit_form</title>
+    <script>
+        function validate(){
+            let n = document.test.nm.value;
+            let p = document.test.pwd.value;
+            let cp = document.test.cpw.value;
+            let age = document.test.age.value;
+            let em = document.test.em.value;
+            let dob = document.test.dob.value;
+            let gen = document.test.gen.value;
+
+            if(n.length <6){
+                alert("Name must consist atleast 6 characters");
+                return false;
+            }
+
+            else if(p.length != 10){
+                alert("Password must be 10 characters long!");
+                return false;
+            }
+
+            else if( p!=cp)
+            {
+                alert("Please enter the password as input above!");            
+                return false;
+            }
+
+            else if(age<18 || age >25)
+            {
+                alert("You should be atleast 18 years but not older than 25!");
+                return false;
+            }
+            else if(dob==null || dob=="")
+            {
+                alert("Please give your DOB!");
+                return false;
+            }
+            else if(em==null || em=="")
+            {
+                alert("Please give your email id");
+                return false;
+            }
+            else if(gen==null||gen=="")
+            {
+                alert("Please select an option for gender!");
+                return false;
+            }
+            
+            else{
+                alert("Successfull!");
+                return true;
+            }
+        }   
+    </script>
+</head>
+<body>
+    <form  name="test" onsubmit="return validate()">
+        Name:
+        <input type="text" name="nm">
+        <br>
+        Password:
+        <input type="password" name="pwd">
+        <br>
+        Confirm Password:
+        <input type="password" name="cpw">
+        <br>
+        Age:
+        <input type="number" name="age">
+        <br>
+        Email:
+        <input type="email" name="em">
+        <br>
+        DOB:
+        <input type="date" name="dob">
+        <br>
+        Select Gender:
+        <input type="radio" name="gen" value="male">Male
+        <input type="radio" name="gen" value="female">Female
+        <br>
+        <input type="submit" value="REGISTER">
+    </form>
+    
+</body>
+</html>

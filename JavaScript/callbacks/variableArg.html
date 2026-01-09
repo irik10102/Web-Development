@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span id="span1"></span>
+    <br>
+    <span id="span2"></span>
+    <script>
+        check('let', 'pork', 'cutlet');
+        check('hello', 'hi', 'singer','superman');
+
+        function check(...words){
+            var max = words[0].length;
+            var maxWord = words[0];
+            words.forEach((val,index)=>{
+                if(max <= val.length){
+                    max = val.length;
+                    maxWord = val;
+                }
+            })
+            alert( `The word that has the highest length is ${maxWord}`);
+            
+        }
+        
+    </script>
+</body>
+</html>

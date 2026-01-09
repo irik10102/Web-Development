@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internal CSS</title>
+
+    <style>
+        table,th,td{
+            border:1px solid black;
+            border-collapse: collapse;
+            padding:10px;
+            text-align:center;
+            margin:20px auto;
+            
+        }
+
+        td{
+            text-align: center;
+
+        }
+
+        table{
+            background-color: aquamarine;
+        }
+
+        div{
+            height:250px;
+            width:400px;
+            background:green;
+            border:1px solid orange;
+            margin:200px auto;
+        }
+
+        table > caption{
+            color:white;
+            font-size: 32px;
+        }
+
+        .row:hover{
+            font-size:32px;
+            font-style:italic;
+        }
+        .row:nth-child(even):hover{
+            background-color: green;
+            color:white;
+
+        }
+
+        .row:nth-child(odd):hover{
+            background-color: purple;
+            color: violet;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <table>
+            <caption>Employee Details</caption>
+            <tr class="row">
+                <th>Employee ID</th>
+                <th>Employee Name</th>
+                <th>LOC</th>
+            </tr>
+
+            <tr class="row">
+                <td>001</td>
+                <td>Sahil</td>
+                <td>Kolkata</td>
+            </tr>
+
+            <tr class="row">
+                <td>002</td>
+                <td>Susovan</td>
+                <td>Asansol</td>
+            </tr>
+
+            <tr class="row">
+                <td>003</td>
+                <td>Naresh</td>
+                <td>Purulia</td>
+            </tr>
+        </table>
+    </div>
+    
+</body>
+</html>

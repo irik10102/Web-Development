@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event</title>
+</head>
+<body>
+    <script>
+        var cEnt=0,cOut=0,cLea=0;
+
+        function enter(){
+            document.getElementById("res1").innerHTML = ++cEnt+ "<br>";
+        }
+
+         function leave(){
+            document.getElementById("res2").innerHTML= ++cLea +"<br>";
+        }
+        function out(){
+            document.getElementById("res3").innerHTML = ++cOut +"<br>";
+        }
+    </script>
+    <div id ="test" style="margin:auto; border:solid 2px red; border-radius: 12%; background:yellow;"
+    onmouseenter="enter()" onmouseleave="leave()" onmouseout="out()">
+
+    </div>
+    <span id="res1"></span>
+    <span id="res2"></span>
+    <span id="res3"></span>
+
+</body>
+</html>

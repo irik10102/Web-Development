@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area</title>
+</head>
+<body>
+    <script>
+        function calc(){
+            let l = document.getElementById("len").value;
+            let b = document.getElementById("bred").value;
+            let h = document.getElementById("hgt").value;
+            
+            let ar = l*b;
+            let v=l*b*h;
+
+            document.getElementById("sp1").innerText=`Area: ${ar}`;
+            document.getElementById("sp2").innerText=`Volume: ${v}`;
+
+        }
+    </script>
+    <form>
+        Enter Length:
+        <input type="number" id="len" onInput="calc()">
+        <br>
+        <br>
+        Enter Breadth:
+        <input type="number" id="bred" onInput="calc()">
+        <br>
+        <span id="sp1" style="background: green;"> </span>
+        <br>
+        Enter Height:
+        <input type="number" id="hgt" onInput="calc()">
+        <br>
+        <span id="sp2" style="background: yellow;"> </span>
+
+    </form>
+</body>
+</html>

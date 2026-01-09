@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Every Word</title>
+</head>
+<body>
+    <form>
+        <label>Enter Sentence:</label>
+        <textarea id="input"></textarea>
+        <button id="find">Reverse</button>
+    </form>
+    <script>
+        var revWords;
+        document.getElementById("find").addEventListener('click', ()=>{
+                event.preventDefault();
+                var words = document.getElementById("input").value.split(" ");
+                revWords = words.map((v,i)=>{
+                    return v.split("").reverse().join("");
+                })
+            console.log(revWords);
+        })
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Events</title>
+</head>
+<body>
+    <script>
+        var cnt=0;
+        var obj= document.getElementById("result");
+        function up(){
+            let output = document.getElementById("input1").value;
+            obj.innerHTML=output+"<br>";
+        }
+        function down(){
+           obj.innerHTML="Typing<br>";
+        }
+        function press(){
+            obj.innerHTML="Key Press Counter"+ ++cnt + "<br>"
+        }
+    </script>
+    <input type="text" id="input1" onkeyup=up() onkeydown="down()" onkeypress="press()">
+    <div id="result" style="margin:auto;background:green;color:white;height:300px;width:300px;text-align: center;">
+
+    </div>
+    
+</body>
+</html>

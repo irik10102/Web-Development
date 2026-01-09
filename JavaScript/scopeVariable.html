@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+
+</head>
+<body>
+    <script>
+
+        var name="Sahil";
+        const title = "Ghosh";
+
+        function nameChange(){
+            let title="Suri";
+
+            document.write("Inside function:-</br>");
+            document.write(name+title);
+        }
+        document.write("Outside function:-</br>");
+        document.write(name+title+"</br>");
+        title="Hansda";
+         document.write(name+title+"</br>");
+
+
+    </script>
+    
+</body>
+</html>

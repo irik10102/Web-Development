@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks</title>
+</head>
+<body>
+    <script>
+        let mathM = parseInt(window.prompt("Enter your marks for Maths:"));
+        let phyM = parseInt(window.prompt("Enter your marks for Physics:"));
+        let chemM = parseInt(prompt("Enter your marks for Chemistry:"));
+        
+        const avg = (mathM+phyM+chemM)/3;
+        if(avg>=80)
+        {
+            document.write("<h3>Excellent</h3>");
+        }
+
+        else if(avg>=60 && avg<80)
+        {
+            document.write("<h3> Very Good</h3>");
+        }
+
+        else if(avg<60 && avg>=40)
+        {
+            document.write("<h3>Good</h3>");
+        }
+
+        else
+        {
+            document.write("<h3>Failed</h3>");
+
+        }
+
+        document.write("Average: "+ avg);
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 3</title>
+</head>
+<body>
+    <ol id="nonRepeat">
+
+    </ol>
+    <table id="word-freq">
+
+    </table>
+    <script>
+        var words = ['hi','hello',"hi","welcome","php","fine","java","php"];
+        var wordCount= new Array();
+        var nonRepeat = new Array();
+        var listContent=``;
+        var wordListFreq=`<th>Word</th>
+                         <th>Count</th>`;
+
+        words.forEach((val,ind)=>{
+            wordCount[val] = 0;
+        })
+
+        words.forEach((val,ind)=>{
+            wordCount[val]+=1;
+        })
+
+       nonRepeat = words.filter((val,ind)=>{
+        if(wordCount[val]==1)
+            return true;
+       })
+
+       nonRepeat.forEach((val,ind)=>{
+            listContent = listContent+ `<li>${val}</li>`;
+       })
+       document.getElementById('nonRepeat').innerHTML = listContent;
+        
+       Object.keys(wordCount).forEach((val,ind)=>{
+        wordListFreq = wordListFreq +`<tr>
+                            <td>${val}</td>
+                            <td>${wordCount[val]}</td>
+                          </tr>`;
+       })
+       
+       document.getElementById('word-freq').innerHTML = wordListFreq;
+    </script>
+</body>
+</html>

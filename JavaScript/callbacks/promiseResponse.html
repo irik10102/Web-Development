@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var chk= async ()=>{
+            try{
+                const wd = document.getElementById('word').value;
+                const pr = new Promise((resolve,reject)=>{
+                    if(wd.length>=6){
+                        resolve("Word is fine");
+                    }
+                    else
+                        reject("sorry word is not fine");
+                })
+                document.getElementById('result').innerHTML = await pr;
+            }
+            catch(err){
+                console.error(err);
+            }
+        }
+    </script>
+    Enter Word:<input type="text" id="word">
+    <br>
+    <button onclick="chk()">Check</button>
+    <br>
+    <h3 id="result"></h3>
+</body>
+</html>

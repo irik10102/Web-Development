@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Add</title>
+</head>
+<body>
+        Select City:
+        <div id="options"></div>
+
+
+    <script>
+        var city = ['Patna', 'Balia', 'Kolkata', 'Midnapore', 'Siuri', 'Deoghar'];
+
+        var res = '<select><option value=''>Select City</option></select>';
+        city.forEach((val,index)=>{
+            res = res + `<option>${val}</option>`
+        })
+        res = res + "</select>";
+        document.getElementById("options").innerHTML = res;
+    </script>
+</body>
+</html>

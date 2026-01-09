@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positions</title>
+    <style>
+        body{
+            height:2000px;
+        }
+        #d1{
+            color:green;
+            background-color: yellow;
+            width:20%;
+            height:20%;
+            border:2px solid green;
+            position:absolute;
+            top:200px;
+            left:500px;
+
+        }
+
+        #d2{
+            color:green;
+            background-color: lightblue;
+            width:20%;
+            height:20%;
+            border:2px solid green;
+            position:static;
+            top:200px;
+
+        }
+
+        #d3{
+            color:green;
+            background-color: lightpink;
+            width:20%;
+            height:20%;
+            border:2px solid green;
+            position:fixed;
+            top:350px;
+            /*left:500px;*/
+
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">
+        this is an example of absolute position
+    </div>
+
+    <div id="d2">
+        this is an example of static div
+    </div>
+
+    <div id="d3">
+        this is the fixed div example
+    </div>
+</body>
+</html>

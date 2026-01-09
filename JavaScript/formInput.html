@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Input</title>
+</head>
+<body>
+    <script>
+        function func(){
+            let nm = document.form1.nm.value;
+            let em = document.form1.em.value;
+            let gen = document.form1.gen.value;
+            let loc = document.form1.loc.value;
+
+            document.getElementById('result').innerHTML= `Name: ${nm}\nEmail: ${em}\nGender: ${gen}\nLocation: ${loc}`;
+
+        }
+
+    </script>
+    <form name="form1">
+        <label>Name: </label>
+        <input type="text" name="nm" placeholder="Enter your Name">
+        <br>
+        <label>Email</label>
+        <input type="text" name="em" placeholder="Enter your email">
+        <br>
+        Select Gender:
+        <input type="radio" name="gen" value="Male">M
+        <input type="radio" name="gen" value="Female">F
+        <br>
+        Select Location:
+        <select name="loc">
+            <option value="Howrah">HWH</option>
+            <option value="Kolkata">KOL</option>
+            <option value="Patna">PATNA</option>
+        </select>
+        <br>
+        <button onclick=func()>Show</button>
+
+    </form>
+    <div id="result" style="color:white;background:grey;height:400px;width:400px;margin:auto;"></div>
+</body>
+</html>

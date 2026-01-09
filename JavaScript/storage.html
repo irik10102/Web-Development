@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function addnm(){
+            let name = document.getElementById('nm').value;
+            localStorage.setItem("name", name);
+        }
+
+        function getnm(){
+            let name = localStorage.getItem("name");
+            document.getElementById('result').innerText = name;
+        }
+
+        function removename(){
+            localStorage.removeItem('name');
+        }
+    </script>
+    Enter Name: <input type="text" id="nm">
+    <br>
+    <button onclick="addnm()">SET</button>
+    <button onclick="getnm()">SHOW</button>
+    <br>
+    <h3 id="result"></h3>
+    <br>
+    <button onclick="removename()">REMOVE</button>
+</body>
+</html>

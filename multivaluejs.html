@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-ValueJS</title>
+</head>
+<body>
+    <script>
+        var degree = document.test.degree;
+        function chk(){
+            event.preventDefault() //forcefully stop reload
+            let cnt = 0;
+            let res= new Array();
+            for(ind in degree){
+                if(degree[ind].checked == true)
+                {
+                    cnt++;
+                    res.push(degree[ind]);
+                }
+            }
+            if(cnt == 0)
+            {
+                alert("Choose a degree!");
+                return false;
+            }
+            else{
+                var ele = document.querySelector("#res");
+                for(val of res ){
+                    val.innerText = "  "+val;
+                }
+            }
+        }
+    </script>
+    <form name="test" onsubmit="return chk()">
+        Select an educational degree:-
+        <select >
+            <option>Choose an option!</option>
+            <option name="degree"  value="MCA">MCA</option>
+            <option  name="degree" value="BTech">BTech</option>
+            <option  name="degree" value="BStat">B.Stat</option>
+            <option  name="degree" value="Bsc">BSc.</option>
+            <option name="degree"  value="Mtech">MTech</option>
+            <option  name="degree" value="BE">BE</option>
+            <option  name="degree" value="ME">ME</option>
+        </select>
+        <button type="SUBMIT">Submit!</button>
+    </form>
+    <br>
+    <div id="res"></div>
+</body>
+</html>

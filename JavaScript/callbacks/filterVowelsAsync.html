@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter words having 1st and Last alphabets ending with a vowel</title>
+</head>
+<body>
+    <script>
+        var words = ['Shine', "paisa", "laddu", 'climb', 'lets', "go", 'abba','Apple'];
+        const vowels=['a', 'e', 'i', 'o', 'u'];
+        words = words.filter((val,ind)=>{
+            let alps = val.toLowerCase().split("");
+            if(vowels.includes(alps[0]) && vowels.includes(alps[alps.length - 1]))
+                return true;
+            else 
+                return false;
+        })
+        console.log(words);
+    </script>
+</body>
+</html>

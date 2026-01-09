@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If Else JS</title>
+</head>
+<body>
+    <script>
+        if(window.confirm("Do you want to vote?"))
+        {
+            let age=window.prompt("Enter your age:");
+            if(age>=18)
+                window.alert("Congrats you are eligible to vote!");
+
+            else{
+                window.alert("Sorry you are not eligible to vote!");
+                window.close();
+            }
+
+        }
+        else{
+            window.alert("Your window will quit!");
+            window.close();
+        }
+
+    </script>
+</body>
+</html>
