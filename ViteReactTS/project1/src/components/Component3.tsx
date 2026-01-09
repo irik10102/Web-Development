@@ -17,7 +17,9 @@ const Component2 = ()=>{
          { id:22, name:"Sahil", email:"sahilghosh123@gmail.com",skills:['angular', 'react', 'php']}
 
     ]);
-
+    const valupdate = ()=>{
+        setEmpData([...empData, {id:22, name:"Sahil", email:"sahilghosh123@gmail.com",skills:['angular', 'react', 'php']}]);
+    }
     return (
         <>
             <ol>
@@ -27,6 +29,7 @@ const Component2 = ()=>{
                     })
                 }
             </ol>
+            <button onClick={valupdate}>Update</button>
         </>
     )
 }
