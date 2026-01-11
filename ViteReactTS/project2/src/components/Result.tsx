@@ -16,21 +16,22 @@ const Result = ()=>{
         const [state, setState] = useState(false);
 
         const update = (e:React.ChangeEvent<HTMLInputElement>)=>{
-            const {name,value} = e.target;
-            setStud({...stud,[name]:value});
+            const {name,value, type} = e.target;
+            setStud({...stud,
+                [name]: type === "number" ? Number(value):value});
             setState(false);
         }
 
         
         const report=()=>{
-            let tot:number = Number(stud['phy'])+Number(stud['chem'])+Number(stud['bio']);
+            let tot:number = stud['phy']+stud['chem']+stud['bio'];
             setStud({...stud,['total']:tot})
             setState(true);
         }
 
         return(
             <>
-                <table><q></q>
+                <table>
                     <tr>
                         <td>Enter Name:</td>
                         <td><input type="text" name="nm" onChange={update}/></td>
