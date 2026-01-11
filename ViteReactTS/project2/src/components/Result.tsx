@@ -31,6 +31,7 @@ const Result = ()=>{
 
         return(
             <>
+                <h1>Student Details</h1>
                 <table>
                     <tr>
                         <td>Enter Name:</td>
