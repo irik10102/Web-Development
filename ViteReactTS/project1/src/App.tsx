@@ -1,16 +1,15 @@
-import { useState } from 'react'
-import Component2 from './components/Component2';
+
 import './App.css'
-import Component3 from './components/Component3';
-import UserInput from './components/UserInput';
-import AreaVolCalc from './components/AreaVolCalc';
+import SelectInput from './components/SelectInput';
+import GetRef from './components/GetRef';
+import AddName from './components/AddName';
 
 function App() {
 
   return (
     <>
       <h1>Welcome to React Based Application</h1>
-      <AreaVolCalc/>
+        <AddName></AddName>
     </>
   )
 }
