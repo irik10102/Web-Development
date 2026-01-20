@@ -2,6 +2,8 @@ import { useState } from "react";
 import Child from "./Child";
 
 
+
+
 interface Stud{
     name:string,
     email:string
@@ -12,16 +14,22 @@ const Parent = ()=>{
     const [studInfo, setstudInfo] = useState<Stud[]>([]);
     const [stud, setStud] = useState<Stud>({name:'', email:''});
 
+    
+
 
     const valUpdate = (e:React.ChangeEvent<HTMLInputElement>)=>{
-        const {name,value} = e.target;
-        setStud({...stud, [name]:value});
+            const {name,value} = e.target;
+            setStud({...stud, [name]:value});
+        
 
     }
 
 
     const add = ()=>{
-        setstudInfo([...studInfo, stud]);
+        
+            setstudInfo([...studInfo, stud]);
+            
+       
         setFlag(!flag);
     }
     return(
@@ -35,7 +43,7 @@ const Parent = ()=>{
             <button onClick ={add}>{(flag)?"Hide":"Show"}</button>
             {
                (flag)?
-                    <Child data={studInfo}/>:<h3>No Names Added yet!</h3>
+                    <Child data1={studInfo}/>:<h3>No Names Added yet!</h3>
                 
             }
         </>

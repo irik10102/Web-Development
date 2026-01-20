@@ -1,10 +1,11 @@
 
-import Parent from './components/Parent'
+import Counter from "./components/Counter"
+import StudentInfo from "./components/StudentInfo"
 
 function App() {
   
   return (
-    <Parent> </Parent>
+    <StudentInfo></StudentInfo>
   )
 }
 

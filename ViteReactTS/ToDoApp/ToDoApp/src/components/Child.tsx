@@ -1,12 +1,12 @@
-interface Stud{
-   data:{name:string, email:string}[]
+interface props{
+   data1:{name:string, email:string}[]
 }
 
-const Child = (info:Stud)=>{
+const Child = (info:props)=>{
     return(
         <>
             <ul>
-                {info.data.map((val)=>{
+                {info.data1.map((val)=>{
                     return <li>Name:{val.name} Email:{val.email}</li>
                 })}
             </ul>
