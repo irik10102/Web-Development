@@ -1,0 +1,39 @@
+The problem we are trying to solve here is very specific and generally related to an internal inability of React.
+The problem is that whenever we need to send props from one component to another we have to send it during calling of a component,
+this leads to dependency such that the prop is first sent by parent to child by calling the child component likewise child component
+send props to its subchild and so on. 
+Therefore if one of the component in between fails to render then the components down the multi-level heirarchy will not be called thus the 
+creating dependency and ultimately the props will be not be send so respectively.
+
+
+To solve this problem we use Context API.
+Imagine a sack consisting of Apples is available publicly such that anyone in requiring the need for apple can pick it up from the sack, this is the
+primary idea of Context API whereas in case of traditional props sending heirarchy, imagine the a queue of people waiting extending there hand to 
+take the apple such that the apple will be delivered only the previous person standing in the gives you, thus you are dependent on the person`s standing before you
+to give that apple to you.
+
+
+
+In Context API, the parent component creates a context using 'createContext()' lets say 
+
+'''
+    myContext = createContext({/*your data*/});      //you may give default data and update it using useState to finally send it via .Provider
+
+    <myContext.Provider >
+        <OneComponent/>
+        <TwoComponent/>
+    <myContext.Provider/>
+
+'''
+
+
+in OneComponent, in order use the content of myContext use useContext()
+'''
+    import {myContext} from 'Path/Parent';
+
+    ...
+    ...
+    const {/*destructure elements*/} = useContext(myContext);
+
+'''
+
